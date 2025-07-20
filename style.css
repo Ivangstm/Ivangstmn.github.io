@@ -1,0 +1,630 @@
+/* --- Variables CSS (Colores y Fuentes) --- */
+:root {
+    --color-primary: #FF5722; /* Naranja vibrante para el acento de Kiki's */
+    --color-secondary: #FFC107; /* Amarillo para destacar */
+    --color-dark: #333; /* Texto oscuro principal */
+    --color-light: #f4f4f4; /* Fondos claros */
+    --color-white: #fff;
+    --font-heading: 'Roboto', sans-serif; /* Puedes descomentar en el HTML para Google Fonts */
+    --font-body: 'Arial', sans-serif;
+}
+
+/* --- Reseteo Básico y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto es crucial para el layout */
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    overflow-x: hidden; /* Evita scroll horizontal innecesario */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Limita el ancho máximo del contenido */
+    margin: auto;
+    padding: 20px 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de las imágenes */
+}
+
+/* Botones Generales */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E64A19; /* Un tono más oscuro al pasar el mouse */
+}
+
+/* --- Cabecera Principal (Main Header) --- */
+.main-header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Se  queda arriba al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Más padding para la cabecera */
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .logo img {
+    height: 50px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+.main-header .logo h1 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+}
+
+.main-header .logo a {
+    color: inherit; /* Hereda el color del texto del h1 */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: var(--color-dark);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+/* Menú Hamburguesa (Oculto por defecto en desktop) */
+.menu-toggle {
+    display: none; /* Oculto en vista de escritorio */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-dark);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Sección Hero (Inicio) --- */
+.hero {
+    background: url('../imagenes/hero_salchipapa.jpg') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
+    color: var(--color-white);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Capa oscura sobre la imagen para mejorar la legibilidad del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidad negra */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* max-width: 800px;  */ /* no funciona */
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- Secciones Generales (Padding y Márgenes) --- */
+section {
+    padding: 60px 0;
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+}
+
+/* --- Sección de Menú ¿? --- */
+.menu-section {
+    background-color: var(--color-white);
+}
+
+.menu-categories {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: var(--color-white);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex; /* Para organizar contenido interno */
+    flex-direction: column;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes del menú */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item h4 {
+    font-size: 1.4rem;
+    margin: 15px 15px 5px 15px;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 15px 10px 15px;
+    flex-grow: 1; /* Para que el párrafo ocupe el espacio disponible. CONSULTAR*/
+}
+
+
+.menu-item .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: 0 15px 15px 15px;
+    text-align: right; /* Precio a la derecha */
+}
+
+.menu-item .add-to-cart-btn {
+    width: calc(100% - 30px); /* Ocupa el ancho del ítem menos el padding. CALC?*/
+    margin: 0 15px 15px 15px;
+    align-self: center; /* Centra el botón. SELF?*/
+}
+
+
+/* --- Sección de Pedidos (Carrito y Formulario) --- */
+.order-section {
+    background-color: var(--color-light);
+}
+
+.order-summary {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.order-summary h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    text-align: center;
+}
+
+#cart-list {
+    list-style: none;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;   /* dashed? */
+    font-size: 1rem;
+}
+
+#cart-list li:last-child {
+    border-bottom: none;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-info span:first-child {
+    font-weight: bold;
+}
+
+.cart-item-quantity { /* quantity? */
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-quantity button {
+    background: none;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.cart-item-quantity button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.cart-item-quantity span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* important _______________________________________*/
+
+.remove-from-cart-btn {
+    background-color: #dc3545 !important; /* Rojo para eliminar */
+    color: var(--color-white) !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    font-size: 0.8rem !important;
+    border-radius: 4px !important;
+}
+
+.remove-from-cart-btn:hover {
+    background-color: #c82333 !important;
+}
+
+.cart-placeholder {
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+}
+
+.cart-totals {
+    text-align: right;
+    margin-top: 20px;
+    border-top: 2px solid var(--color-primary);
+    padding-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cart-totals p {
+    margin-bottom: 10px;
+}
+
+.cart-totals p:last-child {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+}
+
+
+.customer-details-form {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.customer-details-form h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.3);
+}
+
+.payment-method-selection label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.payment-method-selection input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumenta el tamaño del radio button */
+}
+
+#confirm-order-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #28a745; /* Verde para éxito */
+}
+
+/* --- Sección Sobre Nosotros --- */
+.about-section {
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* --- Sección de Contacto --- */
+.contact-section {
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: var(--color-primary);
+}
+
+.contact-info a {
+    color: var(--color-dark); /* Color de texto normal para los enlaces */
+    font-weight: normal;
+}
+
+.contact-info a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px; /* Tamaño de los íconos de redes sociales */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.map-container {
+    margin-top: 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el iframe no se salga de los bordes redondeados */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* --- Pie de Página (Footer) --- */
+.main-footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.main-footer p {
+    margin-bottom: 5px;
+}
+
+/* --- Media Queries para Responsividad (Dispositivos Pequeños) --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-header .logo {
+        width: 100%; /* El logo ocupa todo el ancho */
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .main-nav {
+        display: none; /* Oculta la navegación principal por defecto en móviles */
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        position: absolute;
+        top: 70px; /* Debajo de la cabecera */
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .main-nav.active { /* Clase que JavaScript añadirá para mostrar el menú */
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón hamburguesa en móviles */
+        position: absolute; /* Posiciona el botón */
+        right: 20px;
+        top: 25px;
+    }
+
+    /* Animación del menú hamburguesa */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section h3 {
+        font-size: 1.8rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .order-summary, .customer-details-form {
+        padding: 20px;
+    }
+
+    .order-summary h4, .customer-details-form h4 {
+        font-size: 1.5rem;
+    }
+}

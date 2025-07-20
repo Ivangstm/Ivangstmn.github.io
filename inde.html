@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki's Salchipapas - Las Mejores de Tumaco | Pedidos Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C:\Users\Jackeline Usuario 2\Desktop\Nueva carpeta (2)\img\kiki.jpeg" type="image/x-icon">
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="C:\Users\Jackeline Usuario 2\Desktop\Nueva carpeta (2)\img\kiki.jpeg" alt="Logo de Kiki's Salchipapas">
+                    <h1>Kiki's Salchipapas</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#pedidos">Haz tu Pedido</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>¡El Sabor Auténtico de Tumaco en Cada Salchipapa!</h2>
+                <p>Las salchipapas más deliciosas, crocantes y con los ingredientes más frescos. ¡Tu antojo te espera!</p>
+                <a href="#pedidos" class="btn btn-primary">Pide Online Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h3>Nuestro Menú</h3>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="todo">Todo</button>
+                <button class="category-btn" data-category="salchipapas">Salchipapas</button>
+                <button class="category-btn" data-category="hamburguesas">Hamburguesas</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div class="menu-grid" id="menu-items-container">
+                </div>
+        </div>
+    </section>
+    
+
+    <section id="pedidos" class="order-section">
+        <div class="container">
+            <h3>Tu Pedido Online</h3>
+            <div class="order-summary">
+                <h4>Tu Carrito (<span id="cart-item-count">0</span> productos)</h4>
+                <ul id="cart-list">
+                    <li class="cart-placeholder">Tu carrito está vacío. ¡Añade algo del menú!</li>
+                </ul>
+                <div class="cart-totals">
+                    <p>Subtotal: <span id="cart-subtotal">$0 COP</span></p>
+                    <p>Envío: <span id="delivery-cost">$0 COP</span></p>
+                    <p>Total a Pagar: <span id="cart-total">$0 COP</span></p>
+                </div>
+            </div>
+
+            <div class="customer-details-form">
+                <h4>Detalles para tu Pedido</h4>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre Completo:</label>
+                        <input type="text" id="customer-name" name="customerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Número de WhatsApp:</label>
+                        <input type="tel" id="customer-phone" name="customerPhone" placeholder="Ej: 3001234567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-address">Dirección de Entrega:</label>
+                        <input type="text" id="customer-address" name="customerAddress" placeholder="Ej: Calle 5 # 10-20 Barrio La Floresta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-notes">Notas Adicionales (Opcional):</label>
+                        <textarea id="customer-notes" name="customerNotes" rows="3" placeholder="Ej: Sin cebolla, con extra de salsa rosada"></textarea>
+                    </div>
+
+                    <div class="payment-method-selection">
+                        <h4>Método de Pago:</h4>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="efectivo" checked> Pago en Efectivo al Domiciliario
+                        </label>
+                        </div>
+
+                    <button type="submit" class="btn btn-primary" id="confirm-order-btn">Confirmar Pedido por WhatsApp</button>
+                    <p class="form-message" id="order-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros" class="about-section">
+        <div class="container">
+            <h3>Nuestra Historia</h3>
+            <p>Desde el corazón de Tumaco, Kiki's Salchipapas nació con la misión de llevar el sabor auténtico y la alegría a cada hogar. Con ingredientes frescos y la receta secreta de la abuela, nos hemos convertido en el lugar favorito para disfrutar de las mejores salchipapas de la región.</p>
+            </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h3>Contáctanos</h3>
+            <div class="contact-info">
+                <p><i class="icon-phone"></i> Teléfono/WhatsApp: <a href="tel:+573001234567">300 123 4567</a></p>
+                <p><i class="icon-map"></i> Dirección: Carrera 2 # 3-45, Barrio Centro, Tumaco, Nariño</p>
+                <p><i class="icon-clock"></i> Horario: Lunes a Domingo de 5:00 PM a 1:00 AM</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/kikissalchipapas" target="_blank" aria-label="Facebook de Kiki's"><img src="imagenes/icon_facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com/kikissalchipapas" target="_blank" aria-label="Instagram de Kiki's"><img src="imagenes/icon_instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.997232306232!2d-78.7303038!3d2.1587836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2b86d1a9a8c6a7%3A0xf0c2b2b2b2b2b2b2!2sTumaco%2C%20Nari%C3%B1o%2C%20Colombia!5e0!3m2!1sen!2sco!4v1719600000000!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Kiki's Salchipapas. Todos los derechos reservados.</p>
+            <p>Diseñado con pasión por [Tu Nombre]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
