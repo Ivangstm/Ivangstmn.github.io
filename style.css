@@ -551,16 +551,14 @@ section h3 {
 
 /* --- Media Queries para Responsividad (Dispositivos Pequeños) --- */
 @media (max-width: 768px) {
-    .main-header .container {
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-        justify-content: center;
-        text-align: center;
+
+    .main-header .logo h1{
+        display:flex ;
+        align-items: center;
     }
 
-    .main-header .logo {
-        width: 100%; /* El logo ocupa todo el ancho */
-        justify-content: center;
-        margin-bottom: 15px;
+    .main-header .logo h1{
+        font-size: 1.2rem;
     }
 
     .main-nav {
