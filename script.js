@@ -7,7 +7,7 @@ const menuItems = [
         description: "Papa criolla, salchicha americana, tocineta, queso gratinado, huevo de codorniz, pico de gallo y salsas de la casa.",
         price: 18000, // Precio en COP
         category: "salchipapas",
-        image: "imagenes/salchipapa_especial.jpg" // Asegúrate de tener esta imagen
+        image: "./img/salchipapaEspecial.jpg" // Asegúrate de tener esta imagen
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const menuItems = [
         description: "Papa criolla, salchicha ranchera, maíz tierno, champiñones, queso cheddar y salsas.",
         price: 16000,
         category: "salchipapas",
-        image: "imagenes/salchipapa_ranchera.jpg"
+        image: "./img/salchipapaRanchera.jpg"
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const menuItems = [
         description: "Carne de res 150gr, lechuga, tomate, cebolla, queso, salsa de tomate y mayonesa.",
         price: 14000,
         category: "hamburguesas",
-        image: "imagenes/hamburguesa_clasica.jpg"
+        image: "./img/hamburgesa.jpeg"
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ const menuItems = [
         description: "Salchicha americana, cebolla caramelizada, queso mozzarella, papita triturada y salsas.",
         price: 12000,
         category: "perros", // Nueva categoría de perros calientes
-        image: "imagenes/perro_caliente.jpg"
+        image: "./img/perrocaliente.jpeg"
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ const menuItems = [
         description: "Refrescante Coca-Cola en lata.",
         price: 4000,
         category: "bebidas",
-        image: "imagenes/bebida_coca_cola.jpg"
+        image: "./img/cocacola.jpeg"
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ const menuItems = [
         description: "Jugo natural y refrescante de maracuyá.",
         price: 6000,
         category: "bebidas",
-        image: "imagenes/bebida_jugo_maracuya.jpg"
+        image: "./img/jugoMaracuya.jpg"
     },
     // Añade más ítems del menú aquí
     // {
