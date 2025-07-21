@@ -84,6 +84,7 @@ img {
 .main-header .logo img {
     height: 50px; /* Tamaño del logo */
     margin-right: 10px;
+    border-radius: 20px;
 }
 
 .main-header .logo h1 {
@@ -94,6 +95,7 @@ img {
 
 .main-header .logo a {
     color: inherit; /* Hereda el color del texto del h1 */
+    display: flex;
 }
 
 .main-nav ul {
@@ -140,7 +142,7 @@ img {
 
 /* --- Sección Hero (Inicio) --- */
 .hero {
-    background: url('../imagenes/hero_salchipapa.jpg') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
+    background: url('./img/hero.png') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
     color: var(--color-white);
     text-align: center;
     padding: 100px 20px;
@@ -160,6 +162,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidad negra */
+
     z-index: 1;
 }
 
