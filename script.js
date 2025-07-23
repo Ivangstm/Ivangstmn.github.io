@@ -64,7 +64,7 @@ const menuItems = [
 const deliveryCost = 5000; // Ejemplo: $5.000 COP para Tumaco
 
 // Número de WhatsApp de Kiki's para recibir pedidos (¡Cámbialo al número real de Kiki's!)
-const kikisPhoneNumber = "573235994883"; // Formato: PaísCódigo + Número (Ej: 573001234567 para Colombia)
+const kikisPhoneNumber = "573001234567"; // Formato: PaísCódigo + Número (Ej: 573001234567 para Colombia)
 
 
 // --- 2. Elementos del DOM (HTML) que vamos a manipular ---
